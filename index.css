@@ -1,119 +1,213 @@
 body {
+    font-family: 'Raleway', sans-serif;
+    margin:0;
+    width:100%;
+}
+
+header {
+    width:100%; 
+    background-color: RGBA(222, 91, 109, 0.7); 
+    height:60px; 
+    line-height:60px;
+    border-bottom:5px solid RGB(1, 33, 71);
+    display:inline-block;
+    font-family: 'Pacifico', cursive;
+    font-size:12px;
+}
+
+.name {
+    font-size: 25px;
+    color: RGB(1, 33, 71);
+}
+
+/*CSS for Hamburger Menu*/
+.hamburger {
+    position:absolute;
+    top:0;
+    right:0;
+    line-height:45px;
+    padding:5px 15px 0px 15px;
+    background: none;
+    color: RGB(1, 33, 71);
+    border:0;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.cross {
+    position:absolute;
+    top:0px;
+    right:0;
+    padding:7px 15px 0px 15px;
+    background: none;
+    color: RGB(1, 33, 71);
+    border:0;
+    font-size:3em;
+    line-height:65px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.menu {
+    z-index:1000000;
+    font-weight:bold;
+    font-size:0.8em;
+    width:100%;
+    background:#f1f1f1;
+    position:absolute;
+    text-align:center;
+    font-size:12px;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-image: none;
+}
+
+.menu li {
+    display: block;
+    padding:15px 0 15px 0;
+    border-bottom:#dddddd 1px solid;
+}
+
+.menu li:hover {
+    display: block;
+    background:#ffffff;
+    padding:15px 0 15px 0;
+    border-bottom:#dddddd 1px solid;
+}
+
+.menu ul li a {
+    text-decoration:none;
+    margin: 0px;
+    color:#666;
+}
+
+.menu ul li a:hover {
+    color: #666;
+    text-decoration:none;
+}
+
+.menu a {
+    text-decoration:none;
+    color:#666;
+}
+
+.menu a:hover {
+    text-decoration:none;
+    color:#666;
+}
+/*End CSS for Hamburger Menu*/
+  
+span {
+    padding-left:20px;
+}
+
+main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background-color: antiquewhite;
-    margin: 0px;
-}
-
-.navBar {
-    display: flex;
-    background-color: lightslategray;
-    height: 50px;
-    width: 100%;
-    padding-left: 5px;
-    align-items: center;
-}
-
-.colorBar {
-    width: 100%;
-    height: 8px;
-    background-color: black;
-}
-
-.hamburger {
-    margin: 5px;
-}
-
-.navList {
-    display: none;
+    background-color: RGBA(185, 221, 219, 0.4)
+    /*border: 5px solid blue;*/
 }
 
 .introImage {
-    height: 350px;
-    width: 315px;
-    background-color: lightgray;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
+    display: none;
 }
+
+.headshot {
+    width: 95%;
+    margin: auto;
+    margin-top: 10px;
+}   
 
 .headline {
-    height: 75px;
-    background-color: lightgrey;
-    margin-left: 20px;
-    margin-right: 20px;
+    padding-left: 10px;
+    color: RGB(1, 33, 71);
 }
 
-.headShot {
+.katyImage {
     display: none;
-}
+}    
 
 .bio {
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+}
+
+.fiberFrenzy {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 300px;   
+}    
+
+.projectInfo {
     display: none;
 }
 
-.final {
-    height: 40px;
-    background-color: lightslategray;
-    width: 100%;
-    margin-top: 20px; 
+.projectInfo h3 {
+    font-family: 'Pacifico', cursive;
+    color: RGB(1, 33, 71);
+}
+
+.projectTech {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+}
+
+.TechLogo {
+    display: block;
+    width: 30px;   
+}    
+
+footer {
+    width:100%; 
+    background-color: RGBA(222, 91, 109, 0.7); 
+    padding: 5px;
 }
 
 @media screen and (min-width: 768px) {
     .introImage {
-        height: 350px;
+        display: block;
         width: 100%;
         margin-top: 20px;
-        justify-content: center;
     }
-}
 
-@media screen and (min-width: 1025px) {
-    .headline {
+    .headshot {
         display: none;
-    }
-
-    .hamburger {
-        display: none;
-    }
-
-    .spaceShip {
-        width: 55%;
-    }
-    
-    .navList {
-        display: flex;
-        list-style-type: none;
-        justify-content: space-around;
-        font-size: 20px;
-    }
-
-    .navList li {
-        padding: 2px;
-    }
-
-    .headShot {
-        display: flex;
-        width: 25%; 
-        height: 300px;
-        background-color: lightgray;
-        margin: 20px;
     }
 
     .bio {
-        display: flex;
-        width: 75%;
-        height: 300px;
-        background-color: lightgray;
-        margin-top: 20px;
-        margin-right: 20px;
+        font-size: 16px;
     }
 
-    .totalBio {
+    .projects {
         display: flex;
         flex-direction: row;
+        justify-content: center;
+        margin-bottom: 20px;
     }
 
+    .fiberFrenzy {
+        display: block;
+        width: 500px;
+    }
+
+    .projectInfo {
+        display: block;
+        width: 300px;
+        margin-left: 15px;
+        padding-left: 10px;
+        padding-right: 5px;
+    }
 }
