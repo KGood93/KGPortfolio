@@ -106,6 +106,10 @@ span {
     padding-left:20px;
 }
 
+.homeName {
+    text-decoration: none;   
+}    
+
 main {
     display: flex;
     flex-direction: column;
@@ -133,6 +137,7 @@ main {
 }    
 
 .bio {
+    display: none;
     font-size: 14px;
     padding-left: 10px;
     padding-right: 10px;
@@ -143,9 +148,13 @@ main {
     flex-direction: column;
 }
 
-.fiberFrenzy {
+.projectImage {
+    display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.fiberFrenzy {
     margin-bottom: 10px;
     width: 300px;   
 }    
@@ -188,6 +197,7 @@ footer {
     }
 
     .bio {
+        display: block;
         font-size: 16px;
     }
 
