@@ -16,9 +16,21 @@ header {
 }
 
 .name {
-    font-size: 25px;
+    font-size: 30px;
     color: RGB(1, 33, 71);
 }
+
+a {
+    color: RGB(1, 33, 71);
+}
+
+a:hover {
+    color: RGB(222, 91, 109);
+}
+
+footer a:hover {
+    color: RGB(185, 221, 219);
+}    
 
 /*CSS for Hamburger Menu*/
 .hamburger {
@@ -54,7 +66,7 @@ header {
     font-weight:bold;
     font-size:0.8em;
     width:100%;
-    background:#f1f1f1;
+    background: RGB(185, 221, 219);
     position:absolute;
     text-align:center;
     font-size:12px;
@@ -70,40 +82,47 @@ header {
 .menu li {
     display: block;
     padding:15px 0 15px 0;
-    border-bottom:#dddddd 1px solid;
+    border-bottom: RGB(71, 139, 162) 1px solid;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
 }
 
 .menu li:hover {
     display: block;
-    background:#ffffff;
+    background:RGB(242, 164, 144);
     padding:15px 0 15px 0;
-    border-bottom:#dddddd 1px solid;
+    border-bottom: RGB(71, 139, 162) 1px solid;
 }
 
 .menu ul li a {
     text-decoration:none;
     margin: 0px;
-    color:#666;
+    color: RGB(1, 33, 71);
 }
 
 .menu ul li a:hover {
-    color: #666;
-    text-decoration:none;
+    color: RGB(1, 33, 71);
+    text-decoration: none;
 }
 
 .menu a {
-    text-decoration:none;
-    color:#666;
+    text-decoration: none;
+    color: RGB(1, 33, 71);
 }
 
 .menu a:hover {
-    text-decoration:none;
-    color:#666;
+    text-decoration: none;
+    color: RGB(1, 33, 71);
 }
 /*End CSS for Hamburger Menu*/
   
 span {
     padding-left:20px;
+}
+
+h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .homeName {
@@ -114,7 +133,13 @@ main {
     display: flex;
     flex-direction: column;
     background-color: RGBA(185, 221, 219, 0.4)
-    /*border: 5px solid blue;*/
+}
+
+.sectionHead {
+    font-family: 'Pacifico', cursive;
+    color: RGB(1, 33, 71);
+    font-size: 26px;
+    padding-left: 15px;
 }
 
 .introImage {
@@ -125,7 +150,7 @@ main {
     width: 95%;
     margin: auto;
     margin-top: 10px;
-}   
+}  
 
 .headline {
     padding-left: 10px;
@@ -143,28 +168,85 @@ main {
     padding-right: 10px;
 }
 
+/*Start about Me*/
+.aboutMe {
+    display: flex; 
+    flex-direction: column;
+}
+
+.bioGreeting {
+    font-family: 'pacifico', cursive;
+    margin-top: 0px; 
+    margin-bottom: 0px;
+}
+
+.bioPage {
+    width: 350px;
+    height: 466px;
+    margin-left: auto; 
+    margin-right: auto;
+} 
+
+.bioGraph {
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+.aboutBio {
+    display: block;
+    padding: 10px;
+}
+
+.center {
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 4px; 
+    margin-bottom: 0px;
+}
+
+.centerLinks {
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 15px; 
+    margin-bottom: 0px;
+}
+
+.close {
+    font-family: 'pacifico', cursive;
+    align-content: flex-end;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+/*End about Me*/
+
 .projects {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .projectImage {
     display: block;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
 }
 
 .fiberFrenzy {
     margin-bottom: 10px;
     width: 300px;   
-}    
+}
+
+.projectScreenshots {
+    display: flex; 
+    flex-direction: column;
+}
 
 .projectInfo {
     display: none;
 }
 
 .projectInfo h3 {
-    font-family: 'Pacifico', cursive;
+    font-family: 'Raleway', sans-serif;
     color: RGB(1, 33, 71);
 }
 
@@ -177,12 +259,29 @@ main {
 .TechLogo {
     display: block;
     width: 30px;   
-}    
+}  
+
+/*Project Page Start*/
+.projImage {
+    display: block;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.projInfo {
+    display: block;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+/*Project Page Finish*/
 
 footer {
-    width:100%; 
+    width: 100%; 
     background-color: RGBA(222, 91, 109, 0.7); 
     padding: 5px;
+    text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -204,9 +303,13 @@ footer {
     .projects {
         display: flex;
         flex-direction: row;
-        justify-content: center;
         margin-bottom: 20px;
     }
+
+    .projectImage {
+        margin-right: 20px;
+        margin-left: 0px;  
+    }    
 
     .fiberFrenzy {
         display: block;
@@ -214,10 +317,47 @@ footer {
     }
 
     .projectInfo {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
         width: 300px;
-        margin-left: 15px;
-        padding-left: 10px;
-        padding-right: 5px;
+        padding-right: 15px;
     }
+
+    /*Start about Me*/
+    .aboutMe {
+        display: flex; 
+        flex-direction: row;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+    .aboutBio {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+    }
+
+    /*End About Me*/
+
+    /*Start Projects Page*/
+    .projectsPage {
+        display: flex; 
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    /*Start About Me*/
+    .bioPage {
+        width: 450px;
+        height: 599px;
+    } 
+    /*Finish About Me*/
+    .projImage {
+        width: 550px;
+    }
+
 }
