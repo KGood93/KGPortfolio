@@ -245,9 +245,10 @@ main {
     display: none;
 }
 
-.projectInfo h3 {
+.projectsPage h3 {
     font-family: 'Raleway', sans-serif;
     color: RGB(1, 33, 71);
+    margin-left: 10px;
 }
 
 .projectTech {
